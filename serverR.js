@@ -76,7 +76,7 @@ app.post('/sms', (req, res) => {
     if (players[req.body.From] === undefined) {
       counter ++;
       players[req.body.From] = ["notBegan", "Player" + counter];
-      twiml.message(players[req.body.From][1] + " has been adeed!");
+      twiml.message(players[req.body.From][1] + " has been added!");
       numPlayers++;
     }
     if ((req.body.Body).toLowerCase() === "begin" && players[req.body.From][1] === "Player1" && stopper) {
@@ -131,8 +131,8 @@ app.post('/sms', (req, res) => {
 
             case 2:
               story = "Who lives in a " + userI[0] + " under the sea? " + userI[1] + userI[2] + "! " + userI[3] + " and " + userI[4] + " and " + userI[5] +
-              "is he. " + user[1] + user[2] + "! If nautrical nonsense be something you " + user[6] + ". " + userI[1] + userI[2] + "! Then drop on the deck " +
-              "and flop like a " + user[7] + ". " + userI[1] + userI[2] +"!";
+              "is he. " + userI[1] + userI[2] + "! If nautrical nonsense be something you " + userI[6] + ". " + userI[1] + userI[2] + "! Then drop on the deck " +
+              "and flop like a " + userI[7] + ". " + userI[1] + userI[2] +"!";
               break;
           }
           //Texts all players
