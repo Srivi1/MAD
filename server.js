@@ -5,13 +5,32 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false}));
-
+var userI = [];
+var required = ["noun", "verb", "verb"];
+var counter = 0;
 app.post('/sms', (req, res) => {
   const twiml = new MessagingResponse();
-  var test = req.body.Body;
-  console.log(req.body);
-  console.log(test);
-  twiml.message('The Robots are coming! Head for the hills!');
+
+  userI.push(req.body.Body);
+  console.log(userI.toString());
+  if (required[counter] == undefined) {
+    twiml.message("Here's the story:" /*+ " " + longAssString*/);
+
+
+
+  } else {
+    if (required[counter].localeCompare("noun") == 0) {
+      twiml.message('Enter a noun: ');
+    } else if (required[counter].localeCompare("verb") == 0) {
+      twiml.message('Enter a verb: ');
+    } else {
+      twiml.message("This didn't work lol");
+    }
+  }
+
+  //console.log(counter);
+
+  counter = counter+1;
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());
