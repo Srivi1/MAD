@@ -35,6 +35,9 @@ var story;
       break;
 
     case 2:
-    required = [""];
-    story = ""
+    required = ["fruit", "yourname", "lastname", "adjective", "adjective", "adjective", "verb", "animal", ];
+      story = "Who lives in a " + userI[1] + " under the sea? " + userI[2] + userI[3] + "!" + userI[4] + " and " + userI[5] + " and " + userI[6] +
+      "is he." + user[2] + user[3] + "! If nautrical nonsense be something you " + user[7] + ". " + userI[2] + userI[3] + "! Then drop on the deck " +
+      "and flop like a " + user[8] + ". " + userI[2] + userI[3] +"!";
+      break;
   }
