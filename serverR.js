@@ -123,16 +123,16 @@ app.post('/sms', (req, res) => {
           // Decides the story
           switch (storynum) {
             case 1:
-              story = "Once upon a time, there was a pretty princess named " + userI[0] + ". She was the " + userI[1] + " princess in the galaxy." +
-              "One day, her father told her that she was going to marry a " + userI[2] + ". When she found out she began to " + userI[3] + ". Immediately," +
+              story = "Once upon a time, there was a pretty princess named " + userI[0] + ". She was the " + userI[1] + " princess in the galaxy. " +
+              "One day, her father told her that she was going to marry a " + userI[2] + ". When she found out she began to " + userI[3] + ". Immediately, " +
               "she packed up and ran away to " + userI[4] + ". Once she arrived she found a man named " + userI[5] + ". He became the princess' best friend" +
               " and soon her husband. They had " + userI[6] + " kids together and lived happily ever after.";
               break;
 
             case 2:
-              story = "Who lives in a " + userI[0] + " under the sea? " + userI[1] + userI[2] + "! " + userI[3] + " and " + userI[4] + " and " + userI[5] +
-              "is he. " + userI[1] + userI[2] + "! If nautrical nonsense be something you " + userI[6] + ". " + userI[1] + userI[2] + "! Then drop on the deck " +
-              "and flop like a " + userI[7] + ". " + userI[1] + userI[2] +"!";
+              story = "Who lives in a " + userI[0] + " under the sea? " + userI[1] + " " + userI[2] + "! " + userI[3] + " and " + userI[4] + " and " + userI[5] +
+              "is he. " + userI[1] + " " + userI[2] + "! If nautrical nonsense be something you " + userI[6] + ". " + userI[1] + userI[2] + "! Then drop on the deck " +
+              "and flop like a " + userI[7] + ". " + userI[1] + " " + userI[2] +"!";
               break;
           }
           //Texts all players
